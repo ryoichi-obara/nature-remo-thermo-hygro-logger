@@ -1,0 +1,47 @@
+{
+  "name": "nature-remo-thermo-hygro-logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm i && gulp clean && babel src -d build && gulp install-dependancies",
+    "test": "npm run build && node handle.js",
+    "make": "npm run build && gulp build-zip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryoichi-obara/nature-remo-thermo-hygro-logger.git"
+  },
+  "keywords": [
+    "Nature",
+    "Remo",
+    "thermo-hygro",
+    "logger",
+    "IoT",
+    "Smart",
+    "Home"
+  ],
+  "author": "Ryoichi Obara <npmjs0102@gmail.com> (http://ryoichi0102.hatenablog.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryoichi-obara/nature-remo-thermo-hygro-logger/issues"
+  },
+  "homepage": "https://github.com/ryoichi-obara/nature-remo-thermo-hygro-logger#readme",
+  "dependencies": {
+    "aws-sdk": "^2.188.0",
+    "moment-timezone": "^0.5.14",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-install": "^1.1.0",
+    "gulp-zip": "^4.1.0",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}

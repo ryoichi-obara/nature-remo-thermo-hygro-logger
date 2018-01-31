@@ -1,3 +1,9 @@
+# macOS
+.DS_Store
+
+# Gulp
+build/
+
 # Logs
 logs
 *.log
