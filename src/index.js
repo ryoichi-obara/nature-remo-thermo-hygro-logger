@@ -27,18 +27,26 @@ exports.handler = (event, context, callback) => {
     .then((res) => {
       const resJson = JSON.parse(res);
       const item = {
+        device: resJson[0].name,
         datetime: moment().tz('Asia/Tokyo').format('YYYY-MM-DD HH:mm:ss'),
+        huDatetime: moment(resJson[0].newest_events.hu.created_at).tz('Asia/Tokyo').format('YYYY-MM-DD HH:mm:ss'),
         humidity: resJson[0].newest_events.hu.val,
+        teDatetime: moment(resJson[0].newest_events.te.created_at).tz('Asia/Tokyo').format('YYYY-MM-DD HH:mm:ss'),
         temperature: resJson[0].newest_events.te.val,
       };
       console.log(item);
 
-      dynamo.put({
-        TableName: dynamoTable,
-        Item: item
-      }, (error, data) => {
-        console.log(error);
-        console.log(data);
+      return new Promise((resolve, reject) => {
+        dynamo.put({
+          TableName: dynamoTable,
+          Item: item
+        }, (error, data) => {
+          if (error) {
+            return reject(error);
+          } else {
+            return resolve(data);
+          }
+        });
       });
     })
     .catch(err => console.error(err));
