@@ -1,32 +1,10 @@
 {
   "name": "nature-remo-thermo-hygro-logger",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "npm i && gulp clean && babel src -d build && gulp install-dependancies",
-    "test": "npm run build && node handle.js",
-    "make": "npm run build && gulp build-zip"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ryoichi-obara/nature-remo-thermo-hygro-logger.git"
-  },
-  "keywords": [
-    "Nature",
-    "Remo",
-    "thermo-hygro",
-    "logger",
-    "IoT",
-    "Smart",
-    "Home"
-  ],
   "author": "Ryoichi Obara <npmjs0102@gmail.com> (http://ryoichi0102.hatenablog.com/)",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ryoichi-obara/nature-remo-thermo-hygro-logger/issues"
   },
-  "homepage": "https://github.com/ryoichi-obara/nature-remo-thermo-hygro-logger#readme",
   "dependencies": {
     "moment-timezone": "^0.5.23",
     "request": "^2.88.0",
@@ -44,5 +22,26 @@
     "gulp-clean": "^0.4.0",
     "gulp-install": "^1.1.0",
     "gulp-zip": "^4.2.0"
+  },
+  "homepage": "https://github.com/ryoichi-obara/nature-remo-thermo-hygro-logger#readme",
+  "keywords": [
+    "Home",
+    "IoT",
+    "Nature",
+    "Remo",
+    "Smart",
+    "logger",
+    "thermo-hygro"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryoichi-obara/nature-remo-thermo-hygro-logger.git"
+  },
+  "scripts": {
+    "build": "npm i && gulp clean && babel src -d build && gulp install-dependancies",
+    "make": "npm run build && gulp build-zip",
+    "test": "npm run build && node handle.js"
   }
 }
