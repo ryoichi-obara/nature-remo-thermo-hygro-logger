@@ -28,12 +28,12 @@
   },
   "homepage": "https://github.com/ryoichi-obara/nature-remo-thermo-hygro-logger#readme",
   "dependencies": {
-    "aws-sdk": "^2.188.0",
     "moment-timezone": "^0.5.14",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
+    "aws-sdk": "^2.188.0",
     "babel-cli": "^6.26.0",
     "babel-preset-latest": "^6.24.1",
     "gulp": "^3.9.1",
