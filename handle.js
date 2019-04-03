@@ -1,30 +1,24 @@
-// Parmeters for lambda function. (This is default values of lambda function test.)
+// Developer environment
+require('dotenv').config();
+
+// main parameters for Lambda.
 const event = {
-  key3: 'value3',
-  key2: 'value2',
   key1: 'value1',
+  key2: 'value2',
+  key3: 'value3',
 };
 
-const context = {
-  // callbackWaitsForEmptyEventLoop: [Getter/Setter],
-  done: (err, message) => {
-    console.log(`done: ${message}`);
-  },
-  // succeed: [Function: succeed],
-  // fail: [Function: fail],
-  logGroupName: '/aws/lambda/myFunctionName',
-  logStreamName: 'YYYY/MM/DD/[$LATEST]00000000000000000000000000000000',
-  functionName: 'myFunctionName',
-  memoryLimitInMB: '128',
-  functionVersion: '$LATEST',
-  // getRemainingTimeInMillis: [Function: getRemainingTimeInMillis],
-  invokeid: '00000000-0000-0000-0000-000000000000',
-  awsRequestId: '00000000-0000-0000-0000-000000000000',
-  invokedFunctionArn: 'arn:aws:lambda:ap-northeast-1:000000000000:function:myFunctionName',
-};
+const context = {};
 
-const callback = () => {
-};
+// const lambda = require('./build/index');
+const lambda = require('./src/index');
 
-// require('./build/index').handler(event, context, callback);
-require('./src/index').handler(event, context, callback);
+// Execute.
+console.time('execute lambda.handler');
+lambda.handler(event, context)
+  .then((data) => {
+    console.log(`Process complete successfully. Returned value is below.`);
+    console.log(data);
+  })
+  .catch(e => console.error(e))
+  .finally(() => console.timeEnd('execute lambda.handler'));
