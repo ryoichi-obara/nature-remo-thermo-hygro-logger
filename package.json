@@ -11,7 +11,7 @@
     "request-promise": "^4.2.4"
   },
   "devDependencies": {
-    "aws-sdk": "^2.434.0",
+    "aws-sdk": "^2.437.0",
     "babel-cli": "^6.26.0",
     "babel-preset-latest": "^6.24.1",
     "dotenv": "^7.0.0",
