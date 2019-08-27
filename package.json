@@ -11,13 +11,13 @@
     "request-promise": "^4.2.4"
   },
   "devDependencies": {
-    "aws-sdk": "^2.493.0",
+    "aws-sdk": "^2.518.0",
     "babel-cli": "^6.26.0",
     "babel-preset-latest": "^6.24.1",
-    "dotenv": "^8.0.0",
-    "eslint": "^6.0.1",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.0",
+    "dotenv": "^8.1.0",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-install": "^1.1.0",
