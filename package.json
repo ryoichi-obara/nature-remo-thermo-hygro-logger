@@ -6,7 +6,7 @@
     "url": "https://github.com/ryoichi-obara/nature-remo-thermo-hygro-logger/issues"
   },
   "dependencies": {
-    "moment-timezone": "^0.5.26",
+    "moment-timezone": "^0.5.35",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   },
